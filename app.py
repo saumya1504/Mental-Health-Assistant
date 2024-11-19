@@ -5,15 +5,15 @@ import tensorflow_hub as hub
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-import os
-import tensorflow as tf
+# import os
+# import tensorflow as tf
 
-# Suppress TensorFlow logs
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+# # Suppress TensorFlow logs
+# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-# Limit TensorFlow threads for CPU optimization
-tf.config.threading.set_intra_op_parallelism_threads(1)
-tf.config.threading.set_inter_op_parallelism_threads(1)
+# # Limit TensorFlow threads for CPU optimization
+# tf.config.threading.set_intra_op_parallelism_threads(1)
+# tf.config.threading.set_inter_op_parallelism_threads(1)
 
 
 app = Flask(__name__)
