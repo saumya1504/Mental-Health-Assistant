@@ -5,7 +5,7 @@ import tensorflow_hub as hub
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-
+import tensorflow as tf
 # Configure TensorFlow to allocate minimal memory
 tf.config.experimental.set_memory_growth(tf.config.experimental.list_physical_devices('CPU')[0], True)
 
