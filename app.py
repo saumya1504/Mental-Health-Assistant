@@ -5,9 +5,16 @@ import tensorflow_hub as hub
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+import os
 import tensorflow as tf
-# Configure TensorFlow to allocate minimal memory
-tf.config.experimental.set_memory_growth(tf.config.experimental.list_physical_devices('CPU')[0], True)
+
+# Suppress TensorFlow logs
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
+# Limit TensorFlow threads for CPU optimization
+tf.config.threading.set_intra_op_parallelism_threads(1)
+tf.config.threading.set_inter_op_parallelism_threads(1)
+
 
 app = Flask(__name__)
 CORS(app)
